@@ -8,7 +8,7 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 
 // Environment Variables
-const RAZORPAY_KEY_SECRET = rzp_test_SbeZZF7XaWPDvx;
+const RAZORPAY_KEY_SECRET = 'KzRe9I7A3NCOoRXs2BjPospB';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@studytemplates.com';
 const DOWNLOAD_LINK_BASE = process.env.DOWNLOAD_LINK_BASE || 'https://studytemplates.com/downloads';
 
