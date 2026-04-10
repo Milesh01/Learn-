@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beautiful, organized PDF study note templates designed to improve focus, retention, and productivity. Download instantly for ₹199-₹699.">
+    <meta name="keywords" content="study templates, PDF notes, student productivity, study planner, revision tracker">
+    <meta name="author" content="StudyTemplates">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://studytemplates.com">
+    <meta property="og:title" content="Study Smarter, Not Harder | StudyTemplates">
+    <meta property="og:description" content="Beautiful, organized PDF study note templates designed to improve focus, retention, and productivity.">
+    <meta property="og:image" content="https://studytemplates.com/og-image.jpg">
+    <meta property="og:site_name" content="StudyTemplates">
+    
+    <!-- Twitter Card Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://studytemplates.com">
+    <meta property="twitter:title" content="Study Smarter, Not Harder | StudyTemplates">
+    <meta property="twitter:description" content="Beautiful, organized PDF study note templates designed to improve focus, retention, and productivity.">
+    <meta property="twitter:image" content="https://studytemplates.com/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://studytemplates.com">
+    
+    <!-- Razorpay Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <title>Study Smarter, Not Harder | StudyTemplates - PDF Study Note Templates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            scroll-behavior: smooth;
+            background-color: #fafafa;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-sticky {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #667eea;
+            transition: all 0.2s;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f0f4ff;
+        }
+        
+        .accordion-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button.active {
+            color: #667eea;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 24px;
+        }
+        
+        .pricing-card-highlight {
+            border: 2px solid #667eea;
+            position: relative;
+            transform: scale(1.05);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-card-highlight {
+                transform: scale(1);
+            }
+        }
+        
+        .preview-image {
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f4ff 100%);
+            border-radius: 12px;
+            aspect-ratio: 3/4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #999;
+            font-weight: 500;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .toast.error {
+            background: #ef4444;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-white smooth-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">S</span>
+                    </div>
+                    <span class="font-bold text-xl hidden sm:inline">StudyTemplates</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 smooth-transition text-sm font-medium">Features</a>
+                    <a href="#preview" class="text-gray-600 hover:text-gray-900 smooth-transition text-sm font-medium">Preview</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-gray-900 smooth-transition text-sm font-medium">Benefits</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 smooth-transition text-sm font-medium">Pricing</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gray-900 smooth-transition text-sm font-medium">FAQ</a>
+                </div>
+
+                <!-- CTA Button -->
+                <button onclick="scrollToSection('pricing')" class="hidden md:flex btn-primary text-white px-6 py-2 rounded-lg font-semibold text-sm">
+                    Download Now
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuToggle" class="md:hidden text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#features" class="block text-gray-600 hover:text-gray-900 py-2 text-sm">Features</a>
+                <a href="#preview" class="block text-gray-600 hover:text-gray-900 py-2 text-sm">Preview</a>
+                <a href="#benefits" class="block text-gray-600 hover:text-gray-900 py-2 text-sm">Benefits</a>
+                <a href="#pricing" class="block text-gray-600 hover:text-gray-900 py-2 text-sm">Pricing</a>
+                <a href="#faq" class="block text-gray-600 hover:text-gray-900 py-2 text-sm">FAQ</a>
+                <button onclick="scrollToSection('pricing')" class="w-full mt-4 btn-primary text-white py-2 rounded-lg font-semibold text-sm">
+                    Download Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="fade-in">
+                    <h1 class="text-5xl sm:text-6xl font-bold leading-tight mb-6">
+                        Study Smarter, Not Harder
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Beautiful, organized PDF study note templates designed to improve focus, retention, and productivity. Perfect for students who want to study efficiently.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="scrollToSection('pricing')" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-base">
+                            Get Templates
+                        </button>
+                        <button onclick="scrollToSection('preview')" class="btn-secondary text-purple-600 px-8 py-3 rounded-lg font-semibold text-base">
+                            Preview Pages
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-6">⚡ Instant download • 🔒 Lifetime access • 💯 Money-back guarantee</p>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="fade-in" style="animation-delay: 0.2s">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-100 to-indigo-100 blur-3xl opacity-50"></div>
+                        <div class="relative bg-white rounded-2xl p-4 shadow-2xl transform hover:scale-105 smooth-transition">
+                            <div class="bg-gradient-to-b from-gray-100 to-gray-50 rounded-xl aspect-video flex flex-col items-center justify-center">
+                                <svg class="w-24 h-24 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                                </svg>
+                                <p class="text-gray-400 font-medium">iPad & Print Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Preview Section -->
+    <section id="preview" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+                    Choose Your Study Templates
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Five professionally designed templates to organize your studies
+                </p>
+            </div>
+
+            <!-- Preview Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Template 1 -->
+                <div class="card-hover">
+                    <div class="preview-image">
+                        📝
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mt-4">Cornell Notes</h3>
+                    <p class="text-sm text-gray-600 mt-2">Classic note-taking format with notes, cues, and summary sections</p>
+                </div>
+
+                <!-- Template 2 -->
+                <div class="card-hover">
+                    <div class="preview-image">
+                        📅
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mt-4">Daily Study Planner</h3>
+                    <p class="text-sm text-gray-600 mt-2">Plan your daily study sessions with time blocks and goals</p>
+                </div>
+
+                <!-- Template 3 -->
+                <div class="card-hover">
+                    <div class="preview-image">
+                        ✅
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mt-4">Revision Tracker</h3>
+                    <p class="text-sm text-gray-600 mt-2">Track your revision progress across multiple subjects</p>
+                </div>
+
+                <!-- Template 4 -->
+                <div class="card-hover">
+                    <div class="preview-image">
+                        🎯
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mt-4">Focus Study Sheet</h3>
+                    <p class="text-sm text-gray-600 mt-2">Minimize distractions with focused study topics</p>
+                </div>
+
+                <!-- Template 5 -->
+                <div class="card-hover">
+                    <div class="preview-image">
+                        📊
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mt-4">Weekly Planner</h3>
+                    <p class="text-sm text-gray-600 mt-2">Organize your entire week of studies at a glance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+                    Why Students Love StudyTemplates
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Everything you need to study smarter
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="feature-icon mb-6">📄</div>
+                    <h3 class="text-xl font-semibold mb-3">Printable PDF Templates</h3>
+                    <p class="text-gray-600">High-quality PDFs ready to print. Perfect for analog studying or digital use.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="feature-icon mb-6">✨</div>
+                    <h3 class="text-xl font-semibold mb-3">Clean Minimal Design</h3>
+                    <p class="text-gray-600">Distraction-free layouts designed to help you focus on what matters most.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="feature-icon mb-6">👨‍🎓</div>
+                    <h3 class="text-xl font-semibold mb-3">Perfect for Students</h3>
+                    <p class="text-gray-600">Created by students, for students. Built on proven study techniques.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="feature-icon mb-6">🧠</div>
+                    <h3 class="text-xl font-semibold mb-3">Improve Focus & Productivity</h3>
+                    <p class="text-gray-600">Structured templates help maintain focus and boost study efficiency.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="feature-icon mb-6">📱</div>
+                    <h3 class="text-xl font-semibold mb-3">Works with iPad & Print</h3>
+                    <p class="text-gray-600">Use digitally on iPad or print for traditional studying. Your choice.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="feature-icon mb-6">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3">Instant Download</h3>
+                    <p class="text-gray-600">Get your templates immediately after purchase. Start studying today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+                    How Our Templates Transform Your Study Routine
+                </h2>
+            </div>
+
+            <!-- Benefit 1 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <div class="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl aspect-square flex items-center justify-center">
+                        <span class="text-6xl">📚</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-4">Organize Your Study Notes</h3>
+                    <p class="text-lg text-gray-600 mb-4">Never lose important information again. Our templates provide structured sections to capture and organize every detail of your studies.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Structured note-taking system</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Clear sections for topics and subtopics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Easy to review and reference</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="md:order-2">
+                    <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl aspect-square flex items-center justify-center">
+                        <span class="text-6xl">📊</span>
+                    </div>
+                </div>
+                <div class="md:order-1">
+                    <h3 class="text-3xl font-bold mb-4">Track Your Revision Progress</h3>
+                    <p class="text-lg text-gray-600 mb-4">Monitor which topics you've covered, revised, and mastered. Stay on top of your exam prep with our tracking system.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Visual progress tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Know what you've mastered</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Focused revision on weak areas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <div class="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl aspect-square flex items-center justify-center">
+                        <span class="text-6xl">😌</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-4">Reduce Study Stress</h3>
+                    <p class="text-lg text-gray-600 mb-4">Less time organizing, more time learning. Our templates reduce the anxiety of chaotic notes and disorganized study sessions.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Pre-designed structure reduces overwhelm</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Know exactly what to do when you sit down</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Peace of mind with organized studies</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="md:order-2">
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl aspect-square flex items-center justify-center">
+                        <span class="text-6xl">🧠</span>
+                    </div>
+                </div>
+                <div class="md:order-1">
+                    <h3 class="text-3xl font-bold mb-4">Improve Memory Retention</h3>
+                    <p class="text-lg text-gray-600 mb-4">Active note-taking with our templates improves recall. The Cornell method and spaced repetition techniques are built in.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Cornell method for active learning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Cues and summary sections enhance recall</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Better grades through improved retention</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+                    Loved by Students
+                </h2>
+                <p class="text-xl text-gray-600">
+                    See what students are saying about StudyTemplates
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"These templates made my study routine so much more organized. I went from chaotic notes to structured learning. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">A</div>
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Arjun Patel</p>
+                            <p class="text-sm text-gray-600">Engineering Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"I improved my scores significantly after using these templates. The revision tracker is a game-changer for exam prep!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">P</div>
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Priya Sharma</p>
+                            <p class="text-sm text-gray-600">Medical Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Finally, a tool that understands what students need. The templates are beautiful and actually help me focus better during study sessions."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">R</div>
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Rohan Kumar</p>
+                            <p class="text-sm text-gray-600">JEE Aspirant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Choose the perfect package for your study needs
+                </p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Pack -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 card-hover">
+                    <h3 class="text-2xl font-bold mb-2">Basic Pack</h3>
+                    <p class="text-gray-600 text-sm mb-6">Everything you need to get started</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">₹199</span>
+                        <p class="text-gray-600 text-sm mt-2">One-time payment</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Cornell Notes Template</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Daily Study Planner</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Instant Download</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Lifetime Access</span>
+                        </li>
+                    </ul>
+                    <button onclick="initiatePayment('Basic Pack', 199)" class="w-full bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-300 smooth-transition">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Premium Pack (Highlighted) -->
+                <div class="bg-white p-8 rounded-xl pricing-card-highlight card-hover relative">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <h3 class="text-2xl font-bold mb-2">Premium Pack</h3>
+                    <p class="text-gray-600 text-sm mb-6">Best for serious students</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">₹399</span>
+                        <p class="text-gray-600 text-sm mt-2">One-time payment</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">All Basic Pack Templates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Revision Tracker</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Focus Study Sheet</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Weekly Planner</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Email Support</span>
+                        </li>
+                    </ul>
+                    <button onclick="initiatePayment('Premium Pack', 399)" class="w-full btn-primary text-white py-3 rounded-lg font-semibold">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Ultimate Pack -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 card-hover">
+                    <h3 class="text-2xl font-bold mb-2">Ultimate Student Pack</h3>
+                    <p class="text-gray-600 text-sm mb-6">Complete study ecosystem</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">₹699</span>
+                        <p class="text-gray-600 text-sm mt-2">One-time payment</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">All Premium Pack Templates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Bonus Planning Templates (5)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Exam Prep Checklist</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Priority Email Support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold mr-3">✓</span>
+                            <span class="text-gray-700">Future Updates Free</span>
+                        </li>
+                    </ul>
+                    <button onclick="initiatePayment('Ultimate Student Pack', 699)" class="w-full bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-300 smooth-transition">
+                        Upgrade Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Money Back Guarantee -->
+            <div class="mt-16 bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-xl p-8 text-center">
+                <p class="text-lg text-gray-900">
+                    <span class="font-bold">💯 100% Money-Back Guarantee</span><br>
+                    <span class="text-gray-700">Not satisfied? Get a full refund within 30 days. No questions asked.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Everything you need to know about StudyTemplates
+                </p>
+            </div>
+
+            <!-- Accordion -->
+            <div class="bg-white rounded-xl overflow-hidden">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                    <button onclick="toggleAccordion(this)" class="accordion-button w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 smooth-transition">
+                        <span class="text-lg font-semibold text-left">Are the templates printable?</span>
+                        <span class="text-2xl text-gray-400">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-700">
+                            Yes! All our templates are optimized for printing. They're designed to look great on both digital devices (iPad, tablets) and printed paper. The layouts are clean and professional whether you print them or use them digitally.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                    <button onclick="toggleAccordion(this)" class="accordion-button w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 smooth-transition">
+                        <span class="text-lg font-semibold text-left">Can I use them on iPad?</span>
+                        <span class="text-2xl text-gray-400">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-700">
+                            Absolutely! Our PDF templates work perfectly with iPad apps like Apple Notes, GoodNotes, Notability, and Adobe Acrobat. You can annotate, highlight, and organize your digital notes effortlessly on any device.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                    <button onclick="toggleAccordion(this)" class="accordion-button w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 smooth-transition">
+                        <span class="text-lg font-semibold text-left">Do I get instant download?</span>
+                        <span class="text-2xl text-gray-400">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-700">
+                            Yes! After your purchase is complete, you'll immediately receive a download link via email. You can start using your templates right away. No waiting, no delays.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item">
+                    <button onclick="toggleAccordion(this)" class="accordion-button w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 smooth-transition">
+                        <span class="text-lg font-semibold text-left">Are updates free?</span>
+                        <span class="text-2xl text-gray-400">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-700">
+                            Yes! We regularly update our templates based on student feedback. If you purchase any pack, you'll get all future updates completely free. Ultimate pack subscribers get priority notification of new features.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="accordion-item">
+                    <button onclick="toggleAccordion(this)" class="accordion-button w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 smooth-transition">
+                        <span class="text-lg font-semibold text-left">Can I share my templates with friends?</span>
+                        <span class="text-2xl text-gray-400">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-700">
+                            Our templates are for personal use. Each person should purchase their own copy to support our team's continued development. We offer great value, and we'd love to help all your friends study smarter too!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="accordion-item">
+                    <button onclick="toggleAccordion(this)" class="accordion-button w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 smooth-transition">
+                        <span class="text-lg font-semibold text-left">What if I'm not satisfied?</span>
+                        <span class="text-2xl text-gray-400">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-700">
+                            We offer a 100% money-back guarantee for 30 days. If you're not completely satisfied with the templates, simply contact us and we'll refund your payment instantly. No questions asked.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-600">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Start Studying Like a Top Student
+            </h2>
+            <p class="text-xl text-purple-100 mb-8">
+                Join thousands of students who've transformed their study routine with our templates.
+            </p>
+            <button onclick="scrollToSection('pricing')" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 smooth-transition">
+                Download Your Templates Today
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">S</span>
+                        </div>
+                        <span class="font-bold text-white">StudyTemplates</span>
+                    </div>
+                    <p class="text-sm">Beautiful PDF study templates for students who want to study smarter.</p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white smooth-transition">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white smooth-transition">Pricing</a></li>
+                        <li><a href="#faq" class="hover:text-white smooth-transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white smooth-transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white smooth-transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-500">© 2026 StudyTemplates. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                        <a href="#" class="hover:text-white smooth-transition">Twitter</a>
+                        <a href="#" class="hover:text-white smooth-transition">Instagram</a>
+                        <a href="#" class="hover:text-white smooth-transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // ============================================
+        // RAZORPAY CONFIGURATION
+        // ============================================
+        const RAZORPAY_KEY_ID = 'rzp_test_SbeZZF7XaWPDvx'; // Replace with your Razorpay Key ID
+        const WEBHOOK_URL = 'YOUR_WEBHOOK_URL'; // Replace with your backend webhook URL
+        const ADMIN_EMAIL = 'admin@studytemplates.com'; // Replace with your email
+
+        // ============================================
+        // PAYMENT INITIATION
+        // ============================================
+        function initiatePayment(packageName, amount) {
+            // Validate Razorpay Key
+            if (RAZORPAY_KEY_ID === 'rzp_test_SbeZZF7XaWPDvx') {
+                showToast('⚙️ Please configure Razorpay credentials', 'error');
+                return;
+            }
+
+            // Generate unique order ID
+            const orderId = `ORDER_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+            // Razorpay Options
+            const options = {
+                key: RAZORPAY_KEY_ID,
+                amount: amount * 100, // Amount in paise
+                currency: 'INR',
+                name: 'StudyTemplates',
+                description: packageName,
+                image: 'https://studytemplates.com/logo.png', // Replace with your logo
+                order_id: orderId,
+                
+                // Prefill user details (optional)
+                prefill: {
+                    name: '',
+                    email: '',
+                    contact: ''
+                },
+
+                // Notes to attach with payment
+                notes: {
+                    package_name: packageName,
+                    package_amount: amount
+                },
+
+                // Callback handler
+                handler: function(response) {
+                    handlePaymentSuccess(response, packageName, amount);
+                },
+
+                // Payment failed handler
+                modal: {
+                    ondismiss: function() {
+                        handlePaymentCancelled();
+                    }
+                },
+
+                // Theme
+                theme: {
+                    color: '#667eea'
+                }
+            };
+
+            // Initialize Razorpay and open checkout
+            const rzp = new Razorpay(options);
+            
+            // Handle payment errors
+            rzp.on('payment.failed', function(response) {
+                handlePaymentFailed(response, packageName);
+            });
+
+            rzp.open();
+        }
+
+        // ============================================
+        // PAYMENT SUCCESS HANDLER
+        // ============================================
+        function handlePaymentSuccess(response, packageName, amount) {
+            const { razorpay_payment_id, razorpay_order_id, razorpay_signature } = response;
+
+            // Show loading state
+            showToast('⏳ Processing your order...', 'success');
+
+            // Verify payment with backend
+            verifyPayment(razorpay_payment_id, razorpay_order_id, razorpay_signature, packageName, amount);
+        }
+
+        // ============================================
+        // VERIFY PAYMENT WITH BACKEND
+        // ============================================
+        async function verifyPayment(paymentId, orderId, signature, packageName, amount) {
+            try {
+                const response = await fetch('/api/verify-payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        razorpay_payment_id: paymentId,
+                        razorpay_order_id: orderId,
+                        razorpay_signature: signature,
+                        package_name: packageName,
+                        package_amount: amount,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Payment verified successfully
+                    showToast('✅ Payment successful! Check your email for templates.', 'success');
+                    
+                    // Track event in analytics (if using Google Analytics or Mixpanel)
+                    trackConversion(packageName, amount);
+                    
+                    // Reset form or redirect after 2 seconds
+                    setTimeout(() => {
+                        window.location.href = '/thank-you';
+                    }, 2000);
+                } else {
+                    // Verification failed
+                    showToast('❌ Payment verification failed. Please contact support.', 'error');
+                }
+            } catch (error) {
+                console.error('Verification Error:', error);
+                showToast('❌ An error occurred. Please try again.', 'error');
+            }
+        }
+
+        // ============================================
+        // PAYMENT FAILED HANDLER
+        // ============================================
+        function handlePaymentFailed(response, packageName) {
+            console.error('Payment Failed:', response);
+            showToast(`❌ Payment failed: ${response.error.description}`, 'error');
+        }
+
+        // ============================================
+        // PAYMENT CANCELLED HANDLER
+        // ============================================
+        function handlePaymentCancelled() {
+            showToast('⚠️ Payment cancelled. Please try again.', 'error');
+        }
+
+        // ============================================
+        // ANALYTICS TRACKING
+        // ============================================
+        function trackConversion(packageName, amount) {
+            // Google Analytics Tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'purchase', {
+                    'currency': 'INR',
+                    'value': amount,
+                    'items': [{
+                        'item_id': packageName.replace(/\s+/g, '_'),
+                        'item_name': packageName,
+                        'price': amount,
+                        'quantity': 1
+                    }]
+                });
+            }
+
+            // Mixpanel Tracking (if using Mixpanel)
+            if (typeof mixpanel !== 'undefined') {
+                mixpanel.track('Purchase', {
+                    'package_name': packageName,
+                    'amount': amount,
+                    'currency': 'INR'
+                });
+            }
+        }
+
+        // ============================================
+        // TOAST NOTIFICATION
+        // ============================================
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type === 'error' ? 'error' : ''}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            // Auto remove after 4 seconds
+            setTimeout(() => {
+                toast.remove();
+            }, 4000);
+        }
+
+        // ============================================
+        // UTILITY FUNCTIONS
+        // ============================================
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Sticky Behavior
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                navbar.classList.add('nav-sticky');
+            } else {
+                navbar.classList.remove('nav-sticky');
+            }
+        });
+
+        // Smooth Scroll Function
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Accordion Toggle
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.text-2xl');
+            const isActive = content.classList.contains('active');
+
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelectorAll('.accordion-button .text-2xl').forEach(item => {
+                item.textContent = '+';
+            });
+
+            // Toggle current accordion
+            if (!isActive) {
+                content.classList.add('active');
+                icon.textContent = '−';
+                button.classList.add('active');
+            }
+        }
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Scroll to top on page load
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+</body>
+</html>
